@@ -17,15 +17,25 @@ function handleAuthChanges() {
 
 
 function handleSignIn() {
-  const email= document.getElementById("email").value
+  const email = document.getElementById("email").value
   const pass = document.getElementById("password").value
   console.log("Sign in" + email)
+  firebase.auth().signInWithEmailAndPassword(email, pass).catch(function (error) {
+    const errorcode = error.code
+    const errormsg = error.message
+    alert(errormsg)
+  });
 }
 
 function handleSignUp() {
   const email = document.getElementById("email").value
   const pass = document.getElementById("password").value
   console.log("Sign up" + email)
+  firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function (error) {
+    const errorcode = error.code
+    const errormsg = error.message
+    alert(errormsg)
+  });
 }
 
 window.onload = () => {

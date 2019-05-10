@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
   <title>firebase-auth</title>
 </head>
+
 <body>
   <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-auth.js"></script>
   <script src="firebase.js"></script>
   <script src="home.js"></script>
-  <div class = "container">
+  <div class="container">
     <h1 class="title is-size-1">Welcome Home</h1>
-    <h1 class="subtitle is-size-5" id="nameDis"></h1>
-    <h1 class="subtitle is-size-5" id="emailDis"></h1>
+    <h1 class="subtitle is-size-7" id="emailDis"></h1>
+    <h1 class="subtitle is-size-7" id="uidDis"></h1>
+    <span class="control">
+      <button class="button is-primary" onclick="signOut()">Sign Out</button>
+    </span>
   </div>
 </body>
+
 </html>
